@@ -1,5 +1,12 @@
 export title="Feed"
 
+# Since generating the output for this page requires sourcing every
+# post, we can catch $render here and exit early if we don't need the output,
+# which should be a potentially significant optimization
+if [ "$render" == no ]; then
+	exit
+fi
+
 ls -r posts | while read fileName; do
 	# Evaluate to get title
 	render=no source posts/$fileName
