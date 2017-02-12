@@ -1,0 +1,81 @@
+#main
+{
+	max-width: 800px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header
+{
+	font-size: 42pt;
+	margin: 40px;
+	text-align: center;
+}
+
+nav
+{
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #808080;
+	padding: 10px;
+}
+
+nav ul
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+nav a:link, nav a:visited
+{
+	font-size: 14pt;
+	text-decoration: none;
+	color: black;
+}
+
+nav a:hover
+{
+	color: #808080;
+}
+
+#content
+{
+	margin-top: 20px;
+	padding: 20px;
+}
+
+h1, h2, h3, p
+{
+	margin-bottom: 20px;
+}
+
+h1
+{
+	font-size: 24pt;
+}
+
+h2
+{
+	font-size: 18pt;
+}
+
+h3
+{
+	font-size: 14pt;
+}
+
+p
+{
+	line-height: 1.4em;
+}
+
+code
+{
+	padding: 1px;
+	font-family: monospace;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+

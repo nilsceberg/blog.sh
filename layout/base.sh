@@ -18,12 +18,16 @@ cat << EOF
 	<head>
 		<title>$title | $siteTitle</title>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="$baseUrl/css/reset.css">
+		<link rel="stylesheet" href="$baseUrl/css/main.css">
 	</head>
 	<body>
-		<div id="header">$siteTitle</div>
-		$(bash layout/nav.sh)
-		<div id="content">
-			$(cat)
+		<div id="main">
+			<div id="header">$siteTitle</div>
+			$(bash layout/nav.sh)
+			<div id="content">
+				$(cat)
+			</div>
 		</div>
 	</body>
 </html>
