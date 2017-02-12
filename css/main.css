@@ -44,7 +44,7 @@ nav a:hover
 	color: #808080;
 }
 
-#content
+.content, .index
 {
 	margin-top: 20px;
 	padding: 20px;
@@ -89,4 +89,33 @@ code
 	float: right;
 	color: #bbb;
 }
+
+.index
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.index>div
+{
+	flex-grow: 2;
+	padding-right: 20px;
+}
+
+.index>ul
+{
+	padding-left: 20px;
+	border-left: 1px solid #888;
+	flex-grow: 1;
+}
+
+.index>ul>li
+{
+	margin-bottom: 10px;
+}
+
+/*.index>ul>li .published
+{
+	color: #aaa;
+}*/
 

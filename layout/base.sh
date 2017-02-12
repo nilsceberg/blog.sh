@@ -32,9 +32,7 @@ cat << EOF
 		<div id="main">
 			<div id="header">$siteTitle</div>
 			$(bash layout/nav.sh)
-			<div id="content">
-				$(bash layout/$layout.sh)
-			</div>
+			$(bash layout/$layout.sh)
 		</div>
 	</body>
 </html>
