@@ -11,6 +11,13 @@ fi
 # so set render to false
 export render=no
 
+# First argument is layout; default to 'page'
+if [ -z "$1" ]; then
+	layout=page
+else
+	layout="$1"
+fi
+
 # Render
 cat << EOF
 <!DOCTYPE html>
@@ -26,7 +33,7 @@ cat << EOF
 			<div id="header">$siteTitle</div>
 			$(bash layout/nav.sh)
 			<div id="content">
-				$(cat)
+				$(bash layout/$layout.sh)
 			</div>
 		</div>
 	</body>
