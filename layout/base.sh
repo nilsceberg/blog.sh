@@ -5,6 +5,12 @@ if [ "$render" == "no" ]; then
 	exit
 fi
 
+# If rendering is set to 'bare', just echo the bare content
+if [ "$render" == "bare" ]; then
+	cat
+	exit
+fi
+
 # Avoid recursively rendering when evaluating pages in for example menus
 # (where one might for instance do something like
 # `ls pages | xargs bash -I% -c 'source pages/% && ...'`,
