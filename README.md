@@ -56,7 +56,39 @@ done
 ```
 Since `layout/base.sh` also *sets* `render=no` the first time it is run,
 this can be done inside layouts (but not pages or posts) without explicitly
-setting `render`, in order to create things like nav bars or post index.
+setting `render`, in order to create things like nav bars or a post index.
+
+
+## Writing a post
+
+blog.sh can be used to generate any static site, but its primary intended
+use case is minimalistic blogs.
+
+Posts work in exactly the same way as pages; the separation between `pages/`
+and `posts/` is merely a logical one.o
+
+The default layout files contain a `post` layout, which simply renders a
+header with the `title`, the `published` date, and the post's content.
+The feed and index layouts list the posts sorted in reversed alphabetical
+order, meaning that if you prefix the post's file name with an ISO date,
+the latest post will appear first. For instance, we can create
+`posts/2017-02-12-hello-world.sh`:
+
+```bash
+export title="Hello, world!"
+
+# $published is interpreted and formatted by the date command, so the output
+# of date without arguments should do nicely as the value
+export published="Sun Feb 12 16:28:10 CET 2017"
+
+(markdown | layout/base.sh post) << "EOF"
+
+**Hello**, world!
+
+Super test post!
+
+EOF
+```
 
 
 ## Bare rendering
