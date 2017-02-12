@@ -33,8 +33,8 @@ Markdown converter first:
 ```bash
 export title="Welcome"
 
-(markdown | layout/base.sh page) << EOF
-Hello and welcome to blog.sh!
+(markdown | layout/base.sh page) << "EOF"
+*Hello* and **welcome** to `blog.sh`!
 EOF
 ```
 
@@ -55,8 +55,8 @@ ls posts | while read fileName; do
 done
 ```
 Since `layout/base.sh` also *sets* `render=no` the first time it is run,
-this can be done inside pages, posts, or layouts without explicitly setting
-`render`.
+this can be done inside layouts (but not pages or posts) without explicitly
+setting `render`, in order to create things like nav bars or post index.
 
 
 ## Bare rendering
