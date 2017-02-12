@@ -84,3 +84,9 @@ code
 	border-radius: 2px;
 }
 
+.published
+{
+	float: right;
+	color: #bbb;
+}
+

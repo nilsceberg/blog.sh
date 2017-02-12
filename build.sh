@@ -4,6 +4,7 @@ source ./config.sh
 
 # Create output directory
 mkdir -p $outputDir
+mkdir -p $outputDir/posts
 
 # Build CSS
 cp -r css $outputDir/

@@ -1,6 +1,6 @@
 export title="Lorem Ipsum"
 
-(markdown | layout/base.sh post) << EOF
+(markdown | layout/base.sh) << EOF
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis elit ante. Sed eget sem commodo, rhoncus lorem non, facilisis nisi. Sed sed dui a ipsum ultrices aliquam. Donec bibendum facilisis erat, sit amet sodales arcu pulvinar at. Donec in ultrices magna, eget aliquet metus. Integer mattis, risus quis dignissim interdum, massa dui tristique tellus, sed tempus turpis nisl eu tellus. Etiam eget congue ante.
 
 Praesent mi enim, facilisis vitae purus ac, feugiat hendrerit lacus. Morbi nec lectus enim. Nunc tincidunt erat at maximus hendrerit. In ac nisi interdum turpis vulputate fringilla. Nullam vitae ex congue, eleifend nulla non, ullamcorper erat. Nulla facilisi. Aliquam rhoncus purus sapien, non posuere eros finibus in. Sed sed libero vel leo elementum consectetur non ut risus.
