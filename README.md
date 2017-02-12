@@ -65,7 +65,7 @@ blog.sh can be used to generate any static site, but its primary intended
 use case is minimalistic blogs.
 
 Posts work in exactly the same way as pages; the separation between `pages/`
-and `posts/` is merely a logical one.o
+and `posts/` is merely a logical one.
 
 The default layout files contain a `post` layout, which simply renders a
 header with the `title`, the `published` date, and the post's content.
