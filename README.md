@@ -59,6 +59,37 @@ this can be done inside pages, posts, or layouts without explicitly setting
 `render`.
 
 
+## Bare rendering
+
+The `render` environment variable can also be set to `bare`, which - like 
+`no` - makes the base layout script exit immediately, except that it first
+echoes back the input (that is, the output of the page or post script).
+
+This can be used to create something like a "feed" page with an inline
+display of all posts. It can thus be implemented as (see `pages/feed.sh`):
+
+```bash
+export title="Feed"
+
+ls -r posts | while read fileName; do
+	# Evaluate to get title
+	render=no source posts/$fileName
+
+	# Print metadata
+
+	echo '<div class="feed-post">'
+	echo "<h1 class='published'>$(date +%D --date="$published")</h1>"
+	echo "<h1><a href="$baseUrl/posts/${fileName%%.*}.html">$title</a></h2>"
+
+	# Render bare post content
+	render=bare bash posts/$fileName
+	
+	echo "</div>"
+done | layout/base.sh page
+
+```
+
+
 ## Dependencies
 
 blog.sh as a framework doesn't really have any dependencies other than bash,
