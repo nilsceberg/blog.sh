@@ -58,6 +58,18 @@ Since `layout/base.sh` also *sets* `render=no` the first time it is run,
 this can be done inside layouts (but not pages or posts) without explicitly
 setting `render`, in order to create things like nav bars or a post index.
 
+On the topic of nav bars: in order to control the order of automatically
+enumerated pages, a natural way is to prefix the file names with `00-`,
+`01-`, and so on. You probably don't want this to be reflected in the
+final URL, though, and this can be avoided by setting the `renderTo`
+variable. For example, in `00-index.sh`, add
+
+```bash
+export renderTo=index
+```
+
+to the top, and it will be rendered to `index.html`.
+
 
 ## Writing a post
 

@@ -1,4 +1,5 @@
 export title=About
+export renderTo=about
 
 (markdown | layout/base.sh) << EOF
 # Hello!

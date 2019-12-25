@@ -1,4 +1,5 @@
 export title="Feed"
+export renderTo="feed"
 
 # Since generating the output for this page requires sourcing every
 # post, we can catch $render here and return early if we don't need the
